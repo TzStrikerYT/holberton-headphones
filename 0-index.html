@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="0-styles.css">
+    <link rel="stylesheet" href="1-styles.css">
+    <link rel="stylesheet" href="holberton-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <title>Headphones</title>
   </head>
@@ -14,16 +16,22 @@
         <div class="center">
           <header class="hero-header">
             <!--Here is the img of the header-->
-            <div class="img-container">
-            </div>
             <!--The menu-->
-            <nav class="header-nav">
-              <ul class="menu-list">
-                <li><a href="#what-we-do"><b>what we do</b></a></li>
-                <li><a href="#our-results"><b>our results</b></a></li>
-                <li><a href="#contact-us"><b>contact us</b></a></li>
-              </ul>
-            </nav>
+            <div class="hamburguer-container">
+              <input class="checkbox" id="checkbox" type="checkbox">
+              <label class="label-check" id="label-check" for="checkbox">
+                  <span class="menu-icon"></span>
+              </label>
+              <nav class="header-nav">
+                <div class="img-container">
+                </div>
+                  <ul>
+                      <li><a href="#whatwedo"><strong>what we do</strong></a></li>
+                      <li><a href="#ourresults"><strong>our results</strong></a></li>
+                      <li><a href="#contactus"><strong>contact us</strong></a></li>
+                  </ul>
+              </nav>
+          </div>
           </header>
           <article class="hero-article">
             <div>

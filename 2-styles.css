@@ -550,13 +550,13 @@ main {
 
 /* What we do Section */
 
-/*.do-section {
-  font-family: var(--font-family-2);
-} */
+.do-section {
+  height: 65rem;
+} 
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .do-section {
-    height: 694px;
+    height: 80rem;
   }
 }
 
@@ -654,4 +654,157 @@ main {
 .do-list-text {
   font-size: 14px;
   font-weight: normal;
+}
+
+/* Results Section */
+
+.res-section {
+  color: var(--white-color);
+}
+
+@media screen and (min-width: 767px) {
+  .res-section {
+    height: 650px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .res-section {
+    height: 1000px;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .res-section {
+    height: 1500px;
+  }
+}
+
+/* Background Image Size*/
+.res-section {
+  background-image: url(images/headphones_hero_2.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+  .res-section {
+    background-size: auto;
+    background-position-y: -50px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .res-section {
+    background-size: cover;
+    background-position-x: 40%;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .res-section {
+    background: linear-gradient(to top, rgba(7,22,41,1), rgba(7,22,41,1) 48%, rgba(0,0,0,0)), url(images/headphones_hero_2.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 40%;
+  }
+}
+
+/* Center elements */
+  .res-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .res-center {
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .res-center {
+    padding: 120px 45px 0 45px;
+  }
+}
+
+/* Result Header */
+.res-title {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 769px) {
+  .res-title {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .res-title {
+    height: 80px;
+  }
+}
+
+.res-text {
+  width: 637px;
+  height: 104px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 481px) {
+  .res-text {
+    width: 305px;
+    height: 208px;
+  }
+}
+
+/* Result List */
+.res-list {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .res-list {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.res-el {
+  width: 190px;
+  height: 190px;
+  background-image: url(images/pentagone.png);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-size: auto 90%;
+  padding: auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 481px) {
+  .res-el {
+    margin: calc(100px / 4) auto;
+  }
+
+  .do-section {
+    height: 133rem;
+  }
+
+}
+
+.res-h1 {
+  font-size: 46px;
 }

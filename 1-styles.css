@@ -24,7 +24,12 @@ pre {
 }
 a {
   background-color: transparent;
+  text-decoration: none;
+  color: var(--white-color);
+  cursor: pointer;
+  user-select: none;
 }
+
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
@@ -207,15 +212,179 @@ p {
   line-height: 28px;
 }
 
-/* HAMBURGER FOR PHONES */
+/* Navbar */
+.header-nav {
+  order: -1;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
 
-.hamburger-checkbox {
+.header-nav ul {
+  margin-top: -10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-nav li {
+  padding: 15px;
+  display: none;
+  font-size: 12px;
+}
+
+.menu-logo {
+  width: 230px;
+  height: 40px;
+  background-image: url("images/logo_headphones.png");
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+}
+
+/* Menu Tablet */
+
+@media screen and (max-width: 768px) {
+
+  .header-nav ul {
+    margin-right: -6rem;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-end;
+  }
+
+  .img-container {
+    margin-top: 5rem;
+    width: 161px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+
+  .header-nav ul {
+    margin-right: -6rem;
+    margin-top: 5.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-end;
+  }
+
+  .img-container {
+    margin-top: 5rem;
+    width: 161px;
+  }
+}
+
+/* HAMBURGERDIE*/
+
+.hamburguer-container {
+  width: 100%;
+  display: flex;
+}
+
+.checkbox {
   visibility: hidden;
+  width: 30px;
+  transition: all .3s ease-in-out;
+}
+
+.checkbox:checked {
+  width: 4px;
+}
+
+.label-check {
+  width: 30px;
+  order: -1;
+  top: 9%;
+  left: 0%;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  padding: 2.5rem;
+}
+
+.menu-icon, .menu-icon::before, .menu-icon::after {
+  position: relative;
+  display: block;
+  background: var(--white-color);
+  height: .15rem;
+  width: 12px;
+  transition: all .3s ease-in-out;
+}
+
+.menu-icon::before {
+  position: absolute;
+  content: "";
+  width: 1.7rem;
+  height: .17rem;
+  top: -0.6rem;
+}
+
+.menu-icon::after {
+  position: absolute;
+  content: "";
+  width: 1.7rem;
+  height: .2rem;
+  top: .5rem;
+}
+
+.checkbox:checked ~ * .menu-icon::before {
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.checkbox:checked ~ * .menu-icon {
+  background-color: transparent;
+  width: 0rem;
+}
+
+.checkbox:checked ~ * .menu-icon::after {
+  top: 0;
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.checkbox:checked ~ .header-nav {
+  margin-bottom: 1px;
+}
+.checkbox:checked ~ .header-nav li {
+  display: block;
 }
 
 @media screen and (min-width: 480px) {
+  .label-check {
+    display: none;
+  }
 
+  .header-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+  }
+
+  .header-nav a {
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: flex-start;
+  }
+
+  .header-nav li {
+    margin-top: 100px;
+    display: block;
+    padding: 2px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
 
 @media screen and (min-width: 767px){
     .hero-section {
@@ -228,12 +397,26 @@ p {
     .sub-title {
       line-height: 18px;
     }
+
+    .img-container {
+      margin-top: 12%;
+      margin-left: 19%;
+    }
+
+    .header-nav ul {
+      margin-top: 1rem;
+      margin-left: 5rem;
+      display: block;
+      flex-direction: row;
+      justify-self: flex-end;
+    }
 }
 
 /* Main-section */
 main {
-  height: 100%;
+  top: 0;
   width: 100%;
+  position: absolute;
 }
 
 /* HERO SECTION */
@@ -277,10 +460,11 @@ main {
 }
 
 .img-container {
-  height: 100%;
-  background-image: url(images/logo_headphones.png);
-  background-size: cover;
-  margin-right: auto;
+  width: 230px;
+  height: 40px;
+  background-image: url("images/logo_headphones.png");
+  background-repeat: no-repeat;
+  background-size: 80% auto;
 }
 
 .menu-list {
@@ -295,10 +479,6 @@ main {
 @media screen and (min-width: 767px){
     .hero-header {
         height: 32px;
-      }
-      
-      .img-container {
-        width: 161px;
       }
       
       .menu-list {
@@ -348,7 +528,7 @@ main {
 @media screen and (max-width: 480px) {
     .hero-article {
         margin-top: 298px;
-        padding: 1px 5px;
+        padding: 100px 5px;
     }
 
     .hero-button {

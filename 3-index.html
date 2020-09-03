@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="1-styles.css">
+    <link rel="stylesheet" href="3-styles.css">
     <link rel="stylesheet" href="holberton-style.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
@@ -101,8 +101,91 @@
         </ul>
       </div>
     </section>
-    <section>
 
+     <!--Results section-->
+     <section class="res-section image-background">
+      <div class="center res-center">
+        <header>
+          <h1 class="res-title">Our results speak for themselves</h1>
+          <p class="res-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.
+          </p>
+        </header>
+        <!--Red ligons-->
+        <ul class="res-list">
+          <li class="res-el">
+            <h1 class="res-h1">+2%</h1>
+            <p>Lorem ipsum dolor</p>
+          </li>
+          <li class="res-el">
+            <h1 class="res-h1">+2%</h1>
+            <p>Lorem ipsum dolor</p>
+          </li>
+          <li class="res-el">
+            <h1 class="res-h1">+2%</h1>
+            <p>Lorem ipsum dolor</p>
+          </li>
+          <li class="res-el">
+            <h1 class="res-h1">+2%</h1>
+            <p>Lorem ipsum dolor</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Contact section-->
+    <section class="contact-section">
+      <div class="center contact-c">
+        <form action="#" method="POST" class="contact-form">
+          <h1>Contact us</h1>
+          <fieldset class="text-fill">
+            <input
+              class="contact-line"
+              type="text"
+              name="your-name"
+              id="your-first-name"
+              placeholder="Name"
+              pattern="[A-Za-zÀ-ž\s]{3,}"
+              maxlength="35"
+              autocomplete="on"
+              accesskey="f"
+              required
+            />
+
+            <input
+              class="contact-line"
+              type="email"
+              name="your-email"
+              id="your-email"
+              placeholder="Email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              maxlength="55"
+              autocomplete="on"
+              accesskey="e"
+              required
+            />
+
+            <input
+              class="contact-line"
+              type="text"
+              name="your-message"
+              id="your-message"
+              placeholder="Your message"
+              pattern="[A-Za-zÀ-ž\s]{3,}"
+              maxlength="35"
+              autocomplete="on"
+              accesskey="f"
+              required
+            />
+          </fieldset>
+          <button class="contact-button">call to action</button>
+        </form>
+      </div>
     </section>
     </main>
   </body>
